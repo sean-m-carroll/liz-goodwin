@@ -1,0 +1,33 @@
+{
+  "name": "templately",
+  "version": "1.0.0",
+  "description": "Simple markdown to static HTML generator",
+  "type": "module",
+  "scripts": {
+    "build": "npm run sass && node build.js",
+    "dev": "npm run sass && node build.js --watch",
+    "sass": "sass --no-source-map src/styles:dist/assets",
+    "serve2": "npx serve ./dist",
+    "serve2:watch": "npx live-server ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:build": "node --watch --watch-path=./src build.js",
+    "serve": "browser-sync start --server ./dist --files './dist/**/*' --no-notify"
+  },
+  "keywords": [
+    "markdown",
+    "static",
+    "html"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "6.0.0",
+    "he": "2.0.0",
+    "marked": "18.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "3.0.4",
+    "prettier": "3.10.1",
+    "sass": "1.108.2"
+  }
+}
